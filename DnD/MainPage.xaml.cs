@@ -23,6 +23,15 @@ namespace DnD
              {
                  Coins[i].printData();
              }
+             
+             Dice mydice = new Dice(Dice.DiceType.d20);
+             
+             int[] rollResult = mydice.Roll(4, 0);
+             
+             for (int i = 0; i < rollResult.Length; i++)
+             {
+                 Console.WriteLine("Roll ({0}): {1}", i, rollResult[i]);
+             }
         }
     }
 }

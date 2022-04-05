@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace DnD.Inventory
+namespace DnD.Inventory.Items
 {
-    public class Inventory
+    public class Weapon : Item
     {
         
     }
