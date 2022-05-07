@@ -11,7 +11,7 @@ namespace DnD
         protected string sName;
         
         // Cost of the item
-        protected int iCost;
+        protected Currency iCost;
         
         // Weight of the item (in ounces)
         protected double dWeight;
@@ -47,13 +47,13 @@ namespace DnD
         }
 
         // Get the cost of the item
-        public int getCost()
+        public Currency getCost()
         {
             return iCost;
         }
 
         // Set the cost of the item
-        public void setCost(int newCost)
+        public void setCost(Currency newCost)
         {
             iCost = newCost;
         }

@@ -18,8 +18,11 @@ namespace DnD
             d100
         }
         
+        // Number of dice to roll
+        int numDiceToRoll = 0;
+
         // Type of dice picked from DiceType before
-        private DiceType currentDice;
+        private DiceType diceType;
         
         // Array to hold all dice roll results
         private int[] rollHistory;
@@ -28,21 +31,25 @@ namespace DnD
         private int rollTotal;
         
         // Constructor to assign what type if dice this is
-        public Dice(DiceType newDice)
+        public Dice(int newNumDiceToRoll, DiceType newDiceType)
         {
-            // Set the dice type based on what is passed to the function
-            currentDice = newDice;
-        }
-        
-        // Roll a specific number of dice, record the results, and return back to caller
-        public int[] Roll(int numDiceToRoll, int rollModifier)
-        {
-            // Check to make sure numDiceToRoll is not <= 0
-            if (numDiceToRoll <= 0)
+            // Check to make sure newNumDiceToRoll is not <= 0
+            if (newNumDiceToRoll <= 0)
             {
                 numDiceToRoll = 1;
             }
-            
+            {
+                // Set the number of this type of dice to roll
+                numDiceToRoll = newNumDiceToRoll;
+            }
+
+            // Set the dice type based on what is passed to the function
+            diceType = newDiceType;
+        }
+        
+        // Roll a specific number of dice, record the results, and return back to caller
+        public int[] Roll(int rollModifier)
+        {
             // Create new random object
             Random rnd = new Random();
             

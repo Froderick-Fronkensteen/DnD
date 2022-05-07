@@ -50,7 +50,7 @@ namespace DnD.Inventory.Items
         bool hasStealthDisadvantage = false;
 
         // Constructor to load to new armor
-        public Armor(ArmorType newArmorType, string newArmorName, int armorCost, int newArmorClass, bool newAddDexMod, int newMaxDexMod, int newStrRequirement, bool newHasStealthDisadvantage, int newArmorWeight)
+        public Armor(ArmorType newArmorType, string newArmorName, Currency armorCost, int newArmorClass, bool newAddDexMod, int newMaxDexMod, int newStrRequirement, bool newHasStealthDisadvantage, int newArmorWeight)
         {
             armorType = newArmorType;
             setName(newArmorName);
